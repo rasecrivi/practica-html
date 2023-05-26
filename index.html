@@ -1,14 +1,187 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <!-- title - entre 55 y 65 caracteres -->
+  <title>Aprendiendo HTML</title>
+  <!-- description - no más de 165 caracteres -->
+  <meta name="description" content="En esta página estamos aprendiendo los fundamentos de html con @rasecrivi">
+  <style>
+    h2 {
+      color: orangered;
+    }
+  </style>
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
+  <h2 id="inicio">Aprendiendo HTML</h2>
+  <p>Hola, escribiendo mi primer documento HTML</p>
+  <p>Aprendiendo sobre diseño web</p>
+  <h3>Temario del curso</h3>
+  <ul>
+    <li><a href="index.html#encabezados">Encabezados HTML</a></li>
+    <li><a href="index.html#texto-basico">Etiquetas de Texto Básicas</a></li>
+    <li><a href="index.html#texto-semantico">Etiquetas de Texto Semánticos</a></li>
+    <li><a href="index.html#etiquetas-saltos">Etiquetas de Saltos</a></li>
+    <li><a href="index.html#etiquetas-formateo">Etiquetas de Formateo</a></li>
+    <li><a href="index.html#semanticas-estructuralesI">Etiquetas Semánticas EstructuralesI</a></li>
+    <li><a href="index.html#semanticas-estructuralesII">Etiquetas Semánticas EstructuralesII</a></li>
+    <li><a href="index.html#bloque-linea">Etiquetas de bloque VS Etiquetas de Línea</a></li>
+    <li><a href="index.html#estilos-html">Estilos CSS en HTML</a></li>
+    <li><a href="index.html#scripts-html">Scripts en HTML</a></li>
+  </ul>
+  <hr>
+  <h2 id="encabezados">Encabezados</h2>
+  <h1>Encabezado de nivel 1 - Sólo puede existir un h1 por documento HTML</h1>
+  <h2>Encabezado de nivel 2</h2>
+  <h3>Encabezado de nivel 3</h3>
+  <h4>Encabezado de nivel 4</h4>
+  <h5>Encabezado de nivel 5</h5>
+  <h6>Encabezado de nivel 6</h6>
+  <a href="index.html#inicio">⬆️</a>
+  <hr>
+  <h2 id="texto-basico">Etiquetas de Texto Básicas</h2>
+  <p>parrafo</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum modi consequatur facere, neque vel vitae eos, amet
+    dignissimos quia sed architecto. Ipsum, pariatur iusto id expedita rem blanditiis! Aspernatur, aliquid.</p>
+  <p>Palabras en <b>negrita</b>, <i>italica</i>, <u>subrayado</u>, e = mc<sup>2</sup>, H<sub>2</sub>O,
+    <mark>marcatexto</mark> <small>letras pequeñas</small>
+  </p>
+  <a href="index.html#inicio">⬆️</a>
+  <hr>
+  <h2 id="texto-semantico">Etiquetas de Texto Semánticos</h2>
+  <p><strong>Este texto es importante</strong>. <em>Este texto hace enfasis</em></p>
+  <blockquote>Yo solo se, que no se nada</blockquote>
+  <cite>Socrates</cite>
+  <br>
+  <blockquote cite="https://psicologiaymente.com/reflexiones/frases-lenin">
+    Es preciso soñar, pero con la condición de creer en nuestros sueños. De examinar con atención la vida real, de
+    confrontar nuestra observación con nuestros sueños, y de realizar escrupulosamente nuestra fantasía.
+  </blockquote>
+  <br>
+  <q cite="https://www.muyinteresante.es/historia/35596.html">
+    Los líderes vienen y van, pero el pueblo permanece. Sólo el pueblo es inmortal; todo lo demás es efímero.
+  </q>
+  <p><cite>Galileo</cite> dijo: "... y sin embargo se mueve."</p>
+  <a href="index.html#inicio">⬆️</a>
+  <hr>
+  <h2 id="etiquetas-saltos">Etiquetas de Saltos</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Quam maiores veniam provident sit laboriosam,
+    obcaecati
+    nisi deleniti placeat. Harum cum,<br> porro error corrupti quos illum consectetur amet nostrum magnam eos dolores
+    tempore necessitatibus voluptatum iste placeat deserunt cupiditate,<br> minima expedita soluta beatae veritatis
+    molestiae. In mollitia esse architecto doloremque explicabo.</p>
+  <p>file:/C:/<wbr>Users/<wbr>criva/<wbr>Desktop/<wbr>ejercicios-de-desarrollo
+    -web/<wbr>html_rasecrivi/<wbr>practica-html-2023/<wbr>balotario-de-ejercicios/<wbr>index.html</p>
+  <a href="index.html#inicio">⬆️</a>
+  <hr>
+  <h2 id="etiquetas-formateo">Etiquetas de Formateo</h2>
+  <pre>
+    Tareas por hacer
+    - HTML
+      - Terminar de grabar las secciones de este curso
+      - Editar en un sólo video
+    - CSS
+      - Comenzar a grabar secciones CSS
+      - Editar en un sólo vídeo
+  </pre>
+  <code>Este texto está en formato código</code>
+  <pre>
+    <code>
+      import React from "react";
+      import Title from "./Title";
+    </code>
+  </pre>
+  <a href="index.html#inicio">⬆️</a>
+  <hr>
+  <h2 id="semanticas-estructuralesI">Etiquetas Semánticas EstructuralesI</h2>
+  <div>div - Es una etiqueta contenedora que no tiene semántica</div>
+  <header>header - Cabecera de un sitio web o de una sección</header>
+  <div>main - Define la sección principal del documento, sólo puede existir una etiqueta main por documento.</div>
+  <footer>footer - Pié de página de un sitio web o de una sección.</footer>
+  <nav>nav - Representa una navegación</nav>
+  <div>article - Representa una sección autocontenido ( que por si sola se explica)</div>
+  <aside>aside - Representa contenido complementario o secundario</aside>
+  <div>section - Representa una sección de contenido genérico</div>
+  <address>address - Representa una información de contacto</address>
+  <a href="index.html#inicio">⬆️</a>
+  <hr>
+  <h2 id="semanticas-estructuralesII">Etiquetas Semánticas EstructuralesII</h2>
+  <header>
+    <h3>Curso de Desarrollo web Gratuitos</h3>
+  </header>
+  <aside>Visita mi canal de YouTube</aside>
+  <main>
+    <article>
+      <h4>Navegadores más utilizados en el año 2023</h4>
+      <section>
+        <header>
+          <h5>Chrome</h5>
+        </header>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit illo harum doloremque nulla reprehenderit,
+          magnam, vero ipsa, nihil exercitationem perferendis soluta corporis explicabo illum odit vitae fuga vel eius
+          ducimus!</p>
+        <footer>
+          <p>Creado por Google</p>
+        </footer>
+      </section>
+
+      <section>
+        <header>
+          <h5>Firefox</h5>
+        </header>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit illo harum doloremque nulla reprehenderit,
+          magnam, vero ipsa, nihil exercitationem perferendis soluta corporis explicabo illum odit vitae fuga vel eius
+          ducimus!</p>
+        <footer>
+          <p>Creado por Mozilla</p>
+        </footer>
+      </section>
+
+      <section>
+        <header>
+          <h5>Safari</h5>
+        </header>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia blanditiis quasi corporis tempore pariatur
+          magni amet voluptate vitae aliquid harum excepturi, atque nihil, architecto ab ullam. Similique qui
+          dignissimos rerum.</p>
+        <footer>
+          <p>Creado por Apple</p>
+        </footer>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>Deerechos reservados &copy; 2023</p>
+  </footer>
+  <a href="index.html#inicio">⬆️</a>
+  <hr>
+  <h2 id="bloque-linea">Etiquetas de bloque VS Etiquetas de linea</h2>
+  <div style="background-color: yellow; color: red;">La etiqueta de bloque por excelencia es la div, una etiqueta de
+    bloque es aquella que genera saltos de línea con sus etiquetas hermanas</div>
+  <span style="background-color:lightgreen">La etiqueta de línea por excelencia es la span, uns etiqueta de línea
+    sólo ocupa el espacio necesario que tiene su contenido.</span>
+  <span style="background-color: aqua;">Hola soy otro span</span>
+  <br>
+  <a href="index.html#inicio">⬆️</a>
+  <hr>
+  <h2 id="estilos-html">Estilos CSS en HTML</h2>
+  <a href="index.html#inicio">⬆️</a>
+  <hr>
+  <h2 id="scripts-html">Scripts en HTML</h2>
+  <a href="index.html#inicio">⬆️</a>
+  <hr>
+
+  <script>
+    console.log("Estamos aprendiendo Scripts en HTML");
+  </script>
+  <!-- Para llamar a una hoja externa de js -->
+  <script src="/js/miscripts.js"></script>
 
 </body>
 

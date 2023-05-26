@@ -1,0 +1,13 @@
+body {
+  font-family: sans-serif;
+  background-color: lightgray;
+}
+
+h1 {
+  color: navy;
+}
+
+/* para el archivo html comportamiento del scroll suave */
+html {
+  scroll-behavior: smooth;
+}
