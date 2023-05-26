@@ -11,3 +11,9 @@ h1 {
 html {
   scroll-behavior: smooth;
 }
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
