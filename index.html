@@ -62,6 +62,11 @@
     <li><a href="index.html#data-attributesII">Atributos DataII</a></li>
     <li><a href="index.html#imagenes">Imagenes</a></li>
     <li><a href="index.html#svg">SVG</a></li>
+    <li><a href="index.html#picture">Picture</a></li>
+    <li><a href="index.html#figuras">Figuras</a></li>
+    <li><a href="index.html#microdatos">Microdatos</a></li>
+    <li><a href="index.html#listas-ordenadas">Listas Ordenadas</a></li>
+    <li><a href="index.html#listas-desordenadas">Listas Desordenadas</a></li>
   </ul>
   <hr>
   <h2 id="encabezados">Encabezados</h2>
@@ -325,6 +330,165 @@
   <br>
   <a href="index.html#inicio">⬆️</a>
   <hr>
+  <h2 id="picture">Picture</h2>
+
+  <!-- <img srcset="
+  /img/foto1.jpg 1.25x,
+  /img/imagen-html5.jpg 2.5x" src="img/gallo.gif" alt="Gallo Claudio"> -->
+
+  <!-- <img srcset="
+/img/foto1.jpg 800w,
+img/imagen-html5.jpg 1000w" src="img/gallo.gif" alt="Gallo Claudio"> -->
+
+  <picture>
+    <source srcset="/img/moto-azul.jpg" media="(min-width:800px)">
+    <source srcset="/img/moto-purpura.jpg" media="(min-width:600px)">
+    <source srcset="/img/gallo.gif" media="(max-width:600px)">
+    <img src="/img/puesta-selva.jpg" alt="Puesta de la selva">
+  </picture>
+  <br>
+  <a href="index.html#inicio">⬆️</a>
+  <hr>
+
+  <h2 id="figuras">Figuras</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto atque at harum, debitis impedit reprehenderit
+    possimus error numquam itaque. Facilis pariatur incidunt at tempore ab quo amet quasi obcaecati inventore?</p>
+  <figure>
+    <figcaption>Destacar codigo</figcaption>
+    <pre>
+      <code>
+        import React from "react";
+        import Title from "Title";
+
+        function App{
+          return &lt;Title /&gt;
+        }
+      </code>
+    </pre>
+  </figure>
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus ab optio illo vero? Repellendus voluptatibus,
+    corrupti quis est temporibus officiis, nisi rerum architecto praesentium reprehenderit totam placeat odio illum
+    autem!</p>
+  <hr>
+  <figure>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam rerum voluptas repellat. Fugiat eveniet harum quod
+      ullam alias sed eaque asperiores. Eum error nesciunt voluptatibus adipisci sequi vel laboriosam dolorem.</p>
+    <img src="/img/gato_blanco.jpg" alt="Gato tumbado">
+    <figcaption>Gato tumbado</figcaption>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam rerum voluptas repellat. Fugiat eveniet harum quod
+      ullam alias sed eaque asperiores. Eum error nesciunt voluptatibus adipisci sequi vel laboriosam dolorem.</p>
+  </figure>
+  <!-- <figure>
+      <figcaption>The top 10 movies of all time</figcaption>
+      <ol>
+        <li value="10"><cite>Josie and the Pussycats</cite>, 2001</li>
+        <li value="9"><cite lang="sh">Црна мачка, бели мачор</cite>, 1998</li>
+        <li value="8"><cite>A Bug’s Life</cite>, 1998</li>
+        <li value="7"><cite>Toy Story</cite>, 1995</li>
+        <li value="6"><cite>Monsters, Inc</cite>, 2001</li>
+        <li value="5"><cite>Cars</cite>, 2006</li>
+        <li value="4"><cite>Toy Story 2</cite>, 1999</li>
+        <li value="3"><cite>Finding Nemo</cite>, 2003</li>
+        <li value="2"><cite>The Incredibles</cite>, 2004</li>
+        <li value="1"><cite>Ratatouille</cite>, 2007</li>
+      </ol>
+    </figure> -->
+  <a href="index.html#inicio">⬆️</a>
+  <hr>
+
+  <h2 id="microdatos">Microdatos</h2>
+  <!-- Microdatos -->
+  <!-- https://validator.schema.org/ -->
+
+  <!-- 
+      Scope
+      Schemas
+      Propiedades 
+  -->
+
+  <!-- Crtl + f: para buscar en una página -->
+
+  <!-- 
+    crlt + f: En vscode para buscar
+    crtl + h : Para buscar y reemplazar
+   -->
+
+  <!-- <div itemscope itemtype="url-del-schema">
+    <div itemprop="tipo-de-propiedad">
+    </div>
+    <div itemprop="tipo-de-propiedad">
+    </div>
+    <div itemprop="tipo-de-propiedad">
+    </div>
+    <div itemprop="tipo-de-propiedad">
+    </div>
+    <div itemprop="tipo-de-propiedad">
+    </div>
+    <div itemprop="tipo-de-propiedad">
+    </div>
+    <div itemprop="tipo-de-propiedad">
+    </div>
+  </div> -->
+
+  <article class="Product" itemscope itemtype="https://schema.org/Product">
+    <h3 class="Product__name" itemprop="name">Zapatillas urbanas</h3>
+    <img class="Product__image" src="/img/zapatillas-negras.jpeg" alt="Zapatillas Gazelle" itemprop="image">
+    <p class="Product__brand" itemprop="brand">Marca</p>
+    <p class="Product__size" itemprop="size">Tamaño</p>
+    <p class="Product__color" itemprop="color">Color</p>
+  </article>
+  <hr>
+  <article class="Brand" itemscope itemtype="https://schema.org/Brand">
+    <h3 class="Brand__name" itemprop="name">Yomax</h3>
+    <img class="Brand__image" src="/img/zapatillas-yomax.jpeg" alt="Zapatillas Yomax" itemprop="image">
+    <p class="Brand__description" itemprop="description">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod hic odit incidunt, doloribus id molestiae animi
+      quibusdam corrupti facere soluta, adipisci aliquam dolore sint atque assumenda ad itaque quisquam voluptatum.
+    </p>
+  </article>
+  <a href="index.html#inicio">⬆️</a>
+  <hr>
+
+  <h2 id="listas-ordenadas">Listas Ordenadas</h2>
+  <h3>Las estaciones del año</h3>
+  <ol>
+    <li>Primavera</li>
+    <li>Verano</li>
+    <li>Otoño</li>
+    <li>Invierno</li>
+  </ol>
+  <ol start="3">
+    <li>Primavera</li>
+    <li>Verano</li>
+    <li>Otoño</li>
+    <li>Invierno</li>
+  </ol>
+  <ol reversed>
+    <li>Primavera</li>
+    <li>Verano</li>
+    <li>Otoño</li>
+    <li>Invierno</li>
+  </ol>
+  <ol type="i">
+    <li>Primavera</li>
+    <li>Verano</li>
+    <li>Otoño</li>
+    <li>Invierno</li>
+  </ol>
+  <a href="index.html#inicio">⬆️</a>
+  <hr>
+
+  <h2 id="listas-desordenadas">Listas Desordenadas</h2>
+  <h3>Cosas por hacer</h3>
+  <!-- Type: square, circle, disc -->
+  <ul style="list-style-type: disc;">
+    <li>Terminar de grabar los fragmentos del curso HMTL</li>
+    <li>Editar el video final</li>
+    <li>Subirlo a YouTube</li>
+  </ul>
+  <a href="index.html#inicio">⬆️</a>
+  <hr>
+
   <script>
     console.log("Estamos aprendiendo Scripts en HTML");
   </script>
