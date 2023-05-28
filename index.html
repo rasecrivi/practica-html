@@ -9,6 +9,7 @@
   <title>Aprendiendo HTML</title>
   <!-- description - no más de 165 caracteres -->
   <meta name="description" content="En esta página estamos aprendiendo los fundamentos de html con @rasecrivi">
+  <link rel="canonical" href="http://tudominio.com/la-ul-canonica">
   <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
@@ -26,6 +27,12 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff"> -->
+  <!-- Para facebook -->
+  <meta property="og:image" content="https://tudominio.com/img/imagen-html5.jpg">
+  <meta property="url" content="https://tudominio.com/index.html">
+  <!-- Para Twitter -->
+  <meta name="twitter:card" content="sumary">
+  <meta name="twitter:site" content="@rasecrivi">
   <style>
     h2 {
       color: orangered;
@@ -90,6 +97,10 @@
     <li><a href="index.html#enlaces">Enlaces</a></li>
     <li><a href="index.html#elementos-interactivos">Elementos Interactivos</a></li>
     <li><a href="index.html#audio-video">Audio y Video</a></li>
+    <li><a href="index.html#formularios">Formularios</a></li>
+    <li><a href="index.html#metas-seo">Metaetiquetas para SEO y moviles</a></li>
+    <li><a href="index.html#metas-redes-sociales">Metaetiquetas para Redes Socialés</a></li>
+    <li><a href="index.html#accesibilidad">Accesibilidad Web</a></li>
   </ul>
   <hr>
   <h2 id="encabezados">Encabezados</h2>
@@ -740,6 +751,212 @@ img/imagen-html5.jpg 1000w" src="img/gallo.gif" alt="Gallo Claudio"> -->
   <!-- <video src="/media/video/marcha-sovietica.mp4" controls autoplay muted></video>
   <br> -->
   <video src="/media/video/marcha-sovietica.mp4" controls poster="/img/sovietico.jpg" preload></video>
+  <br>
+  <a href="index.html#inicio">⬆️</a>
+  <hr>
+
+  <h2 id="iframes">Iframes</h2>
+  <iframe src="/about.html" frameborder="0"></iframe>
+  <br>
+  <!-- <iframe src="https://www.facebook.com/" frameborder="0"></iframe>
+    <br> -->
+  <iframe src="/media/emmet-cheat-sheet.pdf" frameborder="0"></iframe>
+  <br>
+  <a href="index.html#inicio">⬆️</a>
+  <hr>
+
+  <h2 id="formularios">Formularios</h2>
+  <h3>Elementos de Formularios</h3>
+  <input type="text">
+  <br>
+  <input type="checkbox">
+  <br>
+  <input type="radio">
+  <br>
+  <input type="date">
+  <br>
+  <input type="color">
+  <br>
+  <input type="button" value="enviar">
+  <br>
+  <input type="reset">
+  <br>
+  <input type="file">
+  <br>
+  <input type="file" multiple>
+  <br>
+  <input type="hidden" name="idioma" value="es">
+  <br>
+  <input type="email">
+  <br>
+  <input type="number">
+  <br>
+  <input type="tel">
+  <br>
+  <input type="password">
+  <br>
+  <input type="search">
+  <br>
+  <textarea cols="30" rows="10"></textarea>
+  <br>
+  <select name="" id="">
+    <option value="">HTML</option>
+    <option value="">CSS</option>
+    <option value="">JS</option>
+    <option value="">PYTHON</option>
+    <option value="">PHP</option>
+  </select>
+  <br><br>
+  <select name="" id="" multiple>
+    <option value="">HTML</option>
+    <option value="">CSS</option>
+    <option value="">JS</option>
+    <option value="">PYTHON</option>
+    <option value="">PHP</option>
+  </select>
+  <br>
+  <input type="text" value="rasecrivi" readonly disabled>
+  <br>
+  <input type="text" placeholder="Escribe tu nombre">
+  <br>
+  <h3>Ejemplo de Formularios</h3>
+  <h4>Formulario de Login</h4>
+  <!-- 
+    https://www.google.com/?usuario=RasecRivi&password=Loreto749
+    https://www.google.com/?usuario=RasecRivi&password=Loreto749&idoma=es&pais=inglaterra&language=js&intereses=deportes&intereses=salud&terminos=on
+    https://www.google.com/?usuario=Sergio&password=Iquitos1981&idoma=en&pais=peru&language=js&intereses=finanzas&intereses=salud&terminos=on
+    https://www.google.com/?usuario=Francisco&password=Requena1435&idoma=fr&pais=alemania&language=php&intereses=finanzas&intereses=ecologia&terminos=on
+   -->
+  <form action="https://www.google.com/" method="get" autocomplete="off">
+    <label for="usuario">Usuario:</label>
+    <input type="text" id="usuario" name="usuario" placeholder="Escribe tu nombre" pattern="^[A-Za-z]+$"
+      title="El campo sólo acepta letras" required>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Escribe tu password" required>
+    <br>
+    <h4>Selects, Radios y Checkbox</h4>
+    <p>Elige tu idioma</p>
+    <select name="idoma" required>
+      <option value="" selected>Elija una opción</option>
+      <option value="es">Español</option>
+      <option value="en">Inglés</option>
+      <option value="fr">Francés</option>
+      <option value="it">Italiano</option>
+      <option value="pt">Portugués</option>
+    </select>
+    <br>
+    <p>Elije un país</p>
+    <select name="pais" required>
+      <option value="" selected>Elija una opción</option>
+      <optgroup label="America">
+        <option value="argentina">Argentina</option>
+        <option value="peru">Peru</option>
+        <option value="chile">Chile</option>
+        <option value="colombia">Colombia</option>
+      </optgroup>
+      <optgroup label="Europa">
+        <option value="inglaterra">Inglaterra</option>
+        <option value="alemania">Alemania</option>
+        <option value="francia">Francia</option>
+        <option value="italia">Italia</option>
+      </optgroup>
+    </select>
+    <br>
+    <label for="animal">Mascotas:</label>
+    <input id="animal" list="pest">
+    <datalist id="pest">
+      <option value="perro"></option>
+      <option value="gato"></option>
+      <option value="conejo"></option>
+      <option value="loro"></option>
+      <option value="gorrion"></option>
+      <option value="papagayo"></option>
+      <option value="hamster"></option>
+    </datalist>
+    <br>
+    <p>Elije tu lenguaje de programación favorita</p>
+    <input type="radio" name="language" value="js" id="radio-js" required>
+    <label for="radio-js">JavaScript</label>
+    <br>
+    <input type="radio" name="language" value="py" id="radio-py" checked>
+    <label for="radio-py">Python</label>
+    <br>
+    <input type="radio" name="language" value="php" id="radio-php">
+    <label for="radio-php">PHP</label>
+    <br>
+    <p>Elige tus intereses</p>
+    <label>
+      <input type="checkbox" name="intereses" value="deportes">
+      Deportes
+    </label>
+    <label>
+      <input type="checkbox" name="intereses" value="finanzas" checked>
+      Finanzas
+    </label>
+    <label>
+      <input type="checkbox" name="intereses" value="salud">
+      Salud
+    </label>
+    <label>
+      <input type="checkbox" name="intereses" value="politica">
+      Politica
+    </label>
+    <label>
+      <input type="checkbox" name="intereses" value="ecologia">
+      Ecologia
+    </label>
+    <br>
+    <label>
+      <input type="checkbox" name="terminos" required>
+      ¿Aceptas los terminos y condiciones?
+    </label>
+    <br>
+    <input type="reset">
+    <input type="submit">
+  </form>
+  <h4>Formulario de contacto</h4>
+  <form action="https://formsubmit.co/rasecrivi@gmail.com" method="post" autocomplete="off">
+    <input type="text" name="nombre" placeholder="Escribe tu nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+      title="Nómbre solo acepta letras y espacios en blanco" required>
+    <br>
+    <input type="email" name="email" placeholder="Escribe tu correo" pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$"
+      title="Formato de correo invalido" required>
+    <br>
+    <textarea name="comentarios" cols="50" rows="5" placeholder="Escribe tu comentario" required></textarea>
+    <br>
+    <input type="submit">
+    <input type="reset">
+  </form>
+  <a href="index.html#inicio">⬆️</a>
+  <hr>
+
+  <h2 id="metas-seo">Metaetiquetas para SEO y moviles</h2>
+  <a href="index.html#inicio">⬆️</a>
+  <hr>
+
+  <h2 id="metas-redes-sociales">Metaetiquetas para Redes Sociales</h2>
+  <a href="index.html#inicio">⬆️</a>
+  <hr>
+
+  <h2 id="accesibilidad">Accesibilidad Web</h2>
+  <h3 role="title">Las estaciones del año</h3>
+  <ul role="list">
+    <li tabindex="1" role="listitem">Primavera</li>
+    <li tabindex="2" role="listitem">Verano</li>
+    <li tabindex="3" role="listitem">Otoño</li>
+    <li tabindex="4" role="listitem">Invierno</li>
+  </ul>
+  <a role="link" aria-label="En este enlace encontraras más información sobre las estaciones del año" href="#"
+    target="_blank">Mas
+    información</a>
+  <!-- 
+    https://web.dev/accessible/
+    https://html5accessibility.com/
+    https://www.w3.org/blog/news/archives/8889
+    https://www.youtube.com/channel/UCU6ljj3m1fglIPjSjs2DpRA
+  -->
+
   <br>
   <a href="index.html#inicio">⬆️</a>
   <hr>
